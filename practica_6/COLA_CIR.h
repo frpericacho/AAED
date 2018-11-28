@@ -1,6 +1,7 @@
 #ifndef COLA_CIR_H
 #define COLA_CIR_H
 #include <cassert>
+#include <iostream>
 
 template <typename T> class Cola {
 public:

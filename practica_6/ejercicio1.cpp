@@ -10,7 +10,7 @@ void fun(Pila<int> ,Cola<int> );
 int main(int argc, char const *argv[])
 {
     Pila<int> p;
-    Cola<int> c; 
+    Cola<int> c(100); 
 
     rellenaP(p);
     rellenaC(c);
