@@ -1,0 +1,9 @@
+
+
+class escalonada{
+    public:
+            
+
+    private:
+        
+}
