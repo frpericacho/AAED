@@ -6,36 +6,36 @@
 
 template <typename T> class Lista{
         private:
-        std::string mostrar() const;
-        struct nodo{
-            T elto;
-            nodo *sig;
-            nodo(const T&e, nodo* s = nullptr ) : elto(e),sig(s){}
-        };
-        nodo* head;
-        void copiar(const Lista<T>& l);
+            std::string mostrar() const;
+            struct nodo{
+                T elto;
+                nodo *sig;
+                nodo(const T&e, nodo* s = nullptr ) : elto(e),sig(s){}
+            };
+            nodo* head;
+            void copiar(const Lista<T>& l);
         public:
-        typedef nodo* posicion;
-        Lista();
-        Lista(const Lista<T>& l);
-        Lista<T>& operator =(const Lista<T>& l);
-        posicion initpos() const;
-        void insertar(const T& x, posicion p);
-        void eliminar(posicion p);
-        const T& elemento(posicion p) const{
-            assert(head != nullptr);
-            return p->elto;
-        }
-        T& elemento(posicion p) {
-            assert(head != nullptr);
-            return p->elto;
-        }
-        posicion buscar(const T& x) const;
-        posicion siguiente(posicion p) const;
-        posicion anterior(posicion p) const;
-        ~Lista();
-        template <typename O>
-        friend std::ostream& operator << (std::ostream&,const Lista<O>&);
+            typedef nodo* posicion;
+            Lista();
+            Lista(const Lista<T>& l);
+            Lista<T>& operator =(const Lista<T>& l);
+            posicion initpos() const;
+            void insertar(const T& x, posicion p);
+            void eliminar(posicion p);
+            const T& elemento(posicion p) const{
+                assert(head != nullptr);
+                return p->elto;
+            }
+            T& elemento(posicion p) {
+                assert(head != nullptr);
+                return p->elto;
+            }
+            posicion buscar(const T& x) const;
+            posicion siguiente(posicion p) const;
+            posicion anterior(posicion p) const;
+            ~Lista();
+            template <typename O>
+            friend std::ostream& operator << (std::ostream&,const Lista<O>&);
     };
 
     template <typename T>

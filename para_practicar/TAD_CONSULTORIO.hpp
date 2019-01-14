@@ -5,7 +5,7 @@ class paciente{
     public:
 
     private:
-        Cola<int> c;
+        Cola<int> c; // he puesto entero porque si, comprobar luego
 }
 
 class consultorio{
